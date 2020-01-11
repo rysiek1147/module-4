@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.bg-grey-light {
+  background: #efefef;
+}
+
 a {
   text-decoration: none;
   color: #333;
@@ -45,6 +49,20 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #FED136;
+}
+
+.image-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s;
 }
 
 .box-title {
@@ -187,7 +205,7 @@ section {
 
 .main .subtitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 82px;
+  font-size: 48px;
   text-transform: uppercase;
   color: #fff;
   margin: 25px 0;
@@ -209,6 +227,59 @@ section {
 
 .services .icon-box i {
   font-size: 32px;
+}
+
+/* Portfolio */
+.portfolio-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 45px;
+}
+
+.portfolio-box .info-box {
+  background: #fff;
+  padding: 30px;
+}
+
+.portfolio-box .info-box .box-title, .portfolio-box .info-box .box-description {
+  margin: 0;
+}
+
+.portfolio-box .info-box .box-description {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.portfolio-box:hover .image-box img {
+  transform: scale(1.5);
+}
+
+/* Footer */
+footer {
+  padding: 30px 0;
+}
+
+footer .row {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+footer .icon-box {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  background: #333;
+}
+
+footer .icon-box i {
+  color: #fff;
+}
+
+footer .icon-box:hover {
+  background: #FED136;
 }
 
 /* Responsives */
@@ -236,6 +307,9 @@ section {
     display: flex;
     width: auto;
     padding: 0;
+  }
+  .main .subtitle {
+    font-size: 64px;
   }
 }
 /*# sourceMappingURL=style.css.map */
