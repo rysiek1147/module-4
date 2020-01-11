@@ -1,10 +1,61 @@
 body {
   margin: 0;
+  font-family: "Noto Serif", serif;
+}
+
+.text-center {
+  text-align: center;
 }
 
 a {
   text-decoration: none;
   color: #333;
+}
+
+section {
+  padding: 85px 0;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-style: italic;
+  color: #888;
+  margin: 10px 0 30px 0;
+  font-size: 16px;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 0 auto;
+  border: 4px solid #FED136;
+  border-radius: 50%;
+}
+
+.icon-box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FED136;
+}
+
+.box-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.box-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #888;
 }
 
 .btn {
@@ -30,7 +81,7 @@ a {
 
 /* Navigation */
 .navbar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   background: #fff;
   z-index: 1;
@@ -141,6 +192,23 @@ a {
   color: #fff;
   margin: 25px 0;
   letter-spacing: 5px;
+}
+
+/* Services */
+.services .services-box {
+  padding: 45px 30px 0 30px;
+}
+
+.services .services-box:hover .icon-box {
+  background: #FED136;
+}
+
+.services .services-box:hover .icon-box i {
+  color: #fff;
+}
+
+.services .icon-box i {
+  font-size: 32px;
 }
 
 /* Responsives */

@@ -1,5 +1,6 @@
 $color-light: #fff;
 $color-dark: #333;
+$color-grey: #888;
 $color-gold: #FED136;
 $color-gold-dark: #B8860B;
 $font-text: 'Noto Serif', serif;
@@ -8,10 +9,53 @@ $font-header: 'Montserrat', sans-serif;
 
 body {
     margin: 0;
+    font-family: $font-text;
+}
+.text-center {
+    text-align: center;
 }
 a {
     text-decoration: none;
     color: $color-dark;
+}
+section {
+    padding: 85px 0;
+}
+.section-title {
+    font-family: $font-header;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.section-subtitle {
+    font-style: italic;
+    color: $color-grey;
+    margin: 10px 0 30px 0;
+    font-size: 16px;
+}
+.icon-box {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    border: 4px solid $color-gold;
+    border-radius: 50%;
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $color-gold;
+    }
+}
+.box-title {
+    font-family: $font-header;
+    font-size: 18px;
+}
+.box-description {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $color-grey;
 }
 .btn {
     display: inline-block;
@@ -31,9 +75,10 @@ a {
         background: $color-gold-dark;
     }
 }
+
 /* Navigation */
 .navbar {
-    position: fixed;
+    position: absolute;
     width: 100%;
     background: $color-light;
     z-index: 1;
@@ -126,6 +171,25 @@ a {
         letter-spacing: 5px;
     }
 }
+
+/* Services */
+.services {
+    .services-box {
+        padding: 45px 30px 0 30px;
+        &:hover .icon-box{
+            background: $color-gold;
+            i {
+                color: $color-light;
+            }
+        }
+    }
+    .icon-box {
+        i {
+            font-size: 32px;
+        }
+    }
+}
+
 /* Responsives */
 @media (min-width: 768px) {
     .navbar {
